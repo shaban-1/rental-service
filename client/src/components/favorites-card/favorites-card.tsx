@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
+import { FullOffer } from '../../types/offer';
 import { AppRoute, STARS_COUNT } from "../../const";
-import { OffersList } from "../../types/offer";
 
 type FavoritesCardProps = {
-	offer: OffersList;
+	offer: FullOffer;
 };
 
 function FavoritesCard({ offer }: FavoritesCardProps) {
@@ -18,7 +18,7 @@ function FavoritesCard({ offer }: FavoritesCardProps) {
 				<Link to={`${AppRoute.Offer}/${offer.id}`}>
 					<img
 						className="place-card__image"
-						src={`img/${offer.previewImage}`}
+						src={`/img/${offer.images[0]}`}
 						width="150"
 						height="110"
 						alt={offer.title}
@@ -45,12 +45,12 @@ function FavoritesCard({ offer }: FavoritesCardProps) {
 				</div>
 				<div className="place-card__rating rating">
 					<div className="place-card__stars rating__stars">
-						<span style={{ width: `${Math.round(offer.rating) * 100 / STARS_COUNT}%` }}></span>
+						<span style={{ width: `${(offer.rating / STARS_COUNT) * 100}%` }}></span>
 						<span className="visually-hidden">Rating</span>
 					</div>
 				</div>
 				<h2 className="place-card__name">
-					<Link to={`${AppRoute.Offer}/${offer.id}`}>{offer.title}</Link>
+					<Link to={`${AppRoute.Offer}/:id/${offer.id}`}>{offer.title}</Link>
 				</h2>
 				<p className="place-card__type">{offer.type}</p>
 			</div>

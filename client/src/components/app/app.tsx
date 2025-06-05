@@ -7,24 +7,22 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { JSX } from "react";
 import { AppRoute, AuthorizationStatus } from '../../const';
 import { PrivateRoute } from "../private-route/private-route";
-import { FullOffer, OffersList } from "../../types/offer";
-import { offersList } from "../../mocks/offers-list";
+import { FullOffer } from "../../types/offer";
 
 type AppMainPageProps = {
-	rentalOffersCount: number;
-	offersList: OffersList[];
 	offers: FullOffer[];
+	authorizationStatus: typeof AuthorizationStatus[keyof typeof AuthorizationStatus];
 }
 
-function App({ rentalOffersCount, offers }: AppMainPageProps): JSX.Element {
+function App({ offers, authorizationStatus, }: AppMainPageProps): JSX.Element {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path={AppRoute.Main} element={<MainPage rentalOffersCount={rentalOffersCount} offersList={offersList} />} />
+				<Route path={AppRoute.Main} element={<MainPage />} />
 				<Route path={AppRoute.Login} element={<LoginPage />} />
-				<Route path={AppRoute.Favorites} element={<PrivateRoute authorizationStatus={AuthorizationStatus.Auth} >
-					<FavoritesPage offers={offersList} /></PrivateRoute>} />
-				<Route path={`${AppRoute.Offer}/:id`} element={<OfferPage offers={offers} />} /> 
+				<Route path={AppRoute.Favorites} element={<PrivateRoute authorizationStatus={authorizationStatus}>
+					<FavoritesPage offers={offers} /> </PrivateRoute>} />
+				<Route path={`${AppRoute.Offer}/:id`} element={<OfferPage offers={offers} />} />
 				<Route path="*" element={<NotFoundPage />} />
 			</Routes>
 		</BrowserRouter>

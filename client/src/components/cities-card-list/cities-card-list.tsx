@@ -4,9 +4,10 @@ import { CitiesCard } from '../cities-card/cities-card';
 
 type CitiesCardListProps = {
 	offersList: OffersList[];
+	onListItemHover?: (offerId: string | null) => void;
 };
 
-function CitiesCardList({ offersList }: CitiesCardListProps) {
+function CitiesCardList({ offersList, onListItemHover }: CitiesCardListProps) {
 	return (
 		<div className="cities__places-list places__list tabs__content">
 			{offersList.map((item) => (
@@ -19,6 +20,7 @@ function CitiesCardList({ offersList }: CitiesCardListProps) {
 					previewImage={item.previewImage}
 					isPremium={item.isPremium}
 					rating={item.rating}
+					onListItemHover={onListItemHover}
 				/>
 			))}
 		</div>

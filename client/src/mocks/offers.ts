@@ -3,29 +3,29 @@ import { FullOffer } from "../types/offer";
 export const offers: FullOffer[] = [
 	{
 		id: "bbb06a0e-3f92-446d-9a68-cb64b5d38e2b",
-		title: "Wood and stone place",
-		description: "A new spacious villa, one floor. Jacuzzi top.",
+		title: "Уютная квартира в центре Амстердама",
+		description: "Светлая и современная квартира рядом с Лувром и Сенной. Отличный вариант для пары или небольшой семьи.",
 		type: "apartment",
 		price: 370,
 		images: [
-			"1.png",
+			"7.png",
 			"2.png",
 			"3.png",
 			"4.png",
 			"5.png",
-			"7.png",
+			"1.png",
 		],
-		city: {
-			name: "Paris",
-			location: {
-				latitude: 48.85661,
-				longitude: 2.351499,
+		city: { 
+			name: 'Amsterdam',
+			location: { 
+				latitude: 52.370216, 
+				longitude: 4.895168, 
 				zoom: 13,
-			},
+			} 
 		},
-		location: {
-			latitude: 48.85661,
-			longitude: 2.351499,
+    	location: { 
+			latitude: 52.3909553943508, 
+			longitude: 4.85309666406198, 
 			zoom: 16,
 		},
 		goods: [
@@ -45,8 +45,8 @@ export const offers: FullOffer[] = [
 		],
 		host: {
 			isPro: true,
-			name: "Shaban",
-			avatarUrl: "avatar-angelina.jpg",
+			name: "Max",
+			avatarUrl: "avatar-max.jpg",
 		},
 		isPremium: false,
 		isFavorite: true,
@@ -55,9 +55,9 @@ export const offers: FullOffer[] = [
 		maxAdults: 3,
 	},
 	{
-		id: "bag36a0e-3f92-446d-9a68-cb64b5d38e2b",
-		title: "stone apps",
-		description: "A new spacious appartment.",
+		id: "bbb06a0e-3f92-446d-9a68-cb64b5d38e3b",
+		title: "Квартира с видом на канал",
+		description: "Роскошные апартаменты в самом сердце Парижа с панорамным видом.",
 		type: "apartment",
 		price: 320,
 		images: [
@@ -69,16 +69,16 @@ export const offers: FullOffer[] = [
 			"6.png",
 		],
 		city: {
-			name: "Cologne",
+			name: 'Amsterdam',
 			location: {
-				latitude: 44.85661,
-				longitude: 2.351499,
+				latitude: 52.370216,
+				longitude: 4.895168,
 				zoom: 13,
-			},
+			}
 		},
-		location: {
-			latitude: 44.85661,
-			longitude: 2.351499,
+    	location: {
+			latitude: 52.3609553943508,
+			longitude: 4.85309666406198,
 			zoom: 16,
 		},
 		goods: [
@@ -98,8 +98,8 @@ export const offers: FullOffer[] = [
 		],
 		host: {
 			isPro: true,
-			name: "Shaban",
-			avatarUrl: "avatar-max.jpg",
+			name: "Hasbula",
+			avatarUrl: "avatar-hasbula.jpg",
 		},
 		isPremium: true,
 		isFavorite: true,
@@ -107,4 +107,43 @@ export const offers: FullOffer[] = [
 		bedrooms: 4,
 		maxAdults: 6,
 	},
+	{
+    id: 'bbb06a0e-3f92-446d-9a68-cb64b5d38e4b',
+    title: 'Апартаменты в старом городе',
+    description: 'Квартира с традиционным интерьером и видом на собор.',
+    type: 'apartment',
+    price: 260,
+    images: [
+		"6.png",
+		"5.png",
+		"4.png",
+		"3.png",
+		"2.png",
+		"1.png",
+	],
+    city: {
+		name: 'Amsterdam',
+		location: {
+			latitude: 52.370216,
+			longitude: 4.895168,
+			zoom: 13,
+		}
+	},
+    location: { 
+		latitude: 52.3909553943508, 
+		longitude: 4.929309666406198, 
+		zoom: 16 
+	},
+    goods: ['Air conditioning','Fridge','Washer'],
+    host: {
+		isPro: true,
+		name: "Zaur",
+		avatarUrl: "avatar-zaur.jpg",
+	},
+    isPremium: false,
+    isFavorite: true,
+    rating: 4.6,
+    bedrooms: 2,
+    maxAdults: 4
+  },
 ];

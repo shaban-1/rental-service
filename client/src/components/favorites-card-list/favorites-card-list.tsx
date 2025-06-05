@@ -1,17 +1,17 @@
 import { FavoritesCard } from "../favorites-card/favorites-card";
-import { OffersList } from "../../types/offer";
+import { FullOffer } from '../../types/offer';
 
 type FavoritesCardListProps = {
-	offers: OffersList[];
+	favorites: FullOffer[];
 };
 
-function FavoritesCardList({ offers }: FavoritesCardListProps) {
+function FavoritesCardList({ favorites }: FavoritesCardListProps) {
 	return (
-		<div className="favorites__places">
-			{offers.map((offer) => (
+		<ul className="favorites__places">
+			{favorites.map((offer) => (
 				<FavoritesCard key={offer.id} offer={offer} />
 			))}
-		</div>
+		</ul>
 	);
 }
 

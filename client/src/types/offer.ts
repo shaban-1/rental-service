@@ -38,10 +38,10 @@ export type OffersList = {
 	title: string;
 	type: string;
 	price: number;
+	previewImage: string;
 	city: CityOffer;
 	location: OfferLocation;
 	isFavorite: boolean;
 	isPremium: boolean;
 	rating: number;
-	previewImage: string;
 };
