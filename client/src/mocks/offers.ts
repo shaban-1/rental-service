@@ -146,4 +146,57 @@ export const offers: FullOffer[] = [
     bedrooms: 2,
     maxAdults: 4
   },
+  	{
+		id: "bbb06a0e-3f92-446d-9a68-cb64b5d38e5b",
+		title: "Уютная квартира в центре Амстердама",
+		description: "Светлая и современная квартира рядом с Лувром и Сенной. Отличный вариант для пары или небольшой семьи.",
+		type: "apartment",
+		price: 370,
+		images: [
+			"apartment-03.jpg",
+			"2.png",
+			"3.png",
+			"4.png",
+			"5.png",
+			"1.png",
+		],
+		city: { 
+			name: 'Brussels',
+			location: { 
+				latitude: 50.8503, 
+				longitude: 4.3517, 
+				zoom: 13,
+			} 
+		},
+    	location: { 
+			latitude: 50.850353943508, 
+			longitude: 4.35179666406198, 
+			zoom: 16,
+		},
+		goods: [
+			"Heating",
+			"Wi-Fi",
+			"Fridge",
+			"Laptop friendly workspace",
+			"Baby seat",
+			"Air conditioning",
+			"Washer",
+			"Towels",
+			"Dishwasher",
+			"Kitchen",
+			"Washing machine",
+			"Breakfast",
+			"Coffee machine",
+		],
+		host: {
+			isPro: true,
+			name: "Shaban",
+			avatarUrl: "avatar-shaban.jpg",
+		},
+		isPremium: false,
+		isFavorite: true,
+		rating: 4.9,
+		bedrooms: 2,
+		maxAdults: 3,
+	},
 ];

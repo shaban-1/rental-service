@@ -70,4 +70,27 @@ export const offersList: OffersList[] = [
     isFavorite: true,
     rating: 4.6
   },
+  {
+    id: 'bbb06a0e-3f92-446d-9a68-cb64b5d38e5b',
+    title: 'Апартаменты в старом городе',
+    type: 'apartment',
+    price: 260,
+    previewImage: 'apartment-03.jpg',
+    city: {
+		name: 'Brussels',
+		location: { 
+			latitude: 50.8503, 
+			longitude: 4.3517, 
+			zoom: 13,
+		}
+	},
+    location: { 
+		latitude: 50.850353943508, 
+		longitude: 4.35179666406198, 
+		zoom: 16,
+	},
+    isPremium: false,
+    isFavorite: true,
+    rating: 4.9
+  },
 ];
